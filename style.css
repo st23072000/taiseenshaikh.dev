@@ -6,6 +6,89 @@
   box-sizing: border-box;
 }
 
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-items {
+    position: static;
+    width: 20%;
+  }
+
+  .menu-items.show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-items li {
+    width: 100%;
+  }
+
+  .menu-items li a {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0px;
+}
+
+.menu-items {
+  list-style: none;
+  display: none; /* Hide menu items by default */
+  margin: 5px;
+  padding: 0;
+  background-color: black; /* Background color for the menu box */
+  border: 1px solid black; /* Border around the menu box */
+  border-radius: 5px; /* Rounded corners for the menu box */
+  padding: 0px; /* Padding inside the menu box */
+  position: absolute;
+  right: 0; /* Position menu on the right side */
+  top: 100%; /* Position menu below the navbar */
+  width: 150px; /* Width of the menu box */
+
+  
+}
+
+.menu-items.show {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-items li {
+  margin-bottom: 0px; 
+  margin-top: 0px;/* Space between the links */
+}
+
+.menu-items li a {
+  text-decoration: none;
+  color: #007bff; /* Link color */
+  padding:10px;
+  display: block;
+  border-radius: 1px; /* Rounded corners for links */
+  background-color: black; /* Background color for links */
+   /* Border around links */
+}
+
+.menu-items li a:hover {
+  background-color: #007bff; /* Hover background color for links */
+  color: #ffffff; /* Hover text color for links */
+}
+
+#menu-toggle {
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: auto; /* Ensure the icon stays on the right */
+}
+
+
 body {
   
 background-color:#07374a; ;
@@ -15,16 +98,16 @@ background-color:#07374a; ;
 
 
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
+  
+
+  .navbar-brand {
+  
+    color:rgb(231,231,231);
+    font-weight: 700;
+    font-size: 1px;
     
   }
 
-  .menu-items {
-    flex-direction: column;
-    display: none;
-    gap: 10px;
-  }
 
   .name h1 {
     font-size: 2.5rem;
@@ -37,7 +120,7 @@ background-color:#07374a; ;
 
 @media (max-width: 480px) {
   .navbar-brand {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
   }
 
   .name h1 {
@@ -99,24 +182,23 @@ header {
   height: 64px;
 }
 
-.menu-items {
-  display: flex;
-}
+
 
 .menu-items li {
   list-style: none;
-  padding: 1rem;
+  padding: 0px;
 }
 
 .menu-items a {
   text-decoration: none;
   color:white;
-  font-size: 1.9rem;
-  padding: 0.3rem;
+  font-size: 1.5rem;
+  padding-left: 0px;
 }
 
 .menu-items a:hover {
   border-bottom: 2px solid rgb(231,231,231);
+  margin-left: 0;
 }
 
 .navbar .logo {
@@ -401,10 +483,10 @@ font-family: titillium-font;
 }
 
 .navbar-brand {
-  display: none;
+  
   color:rgb(231,231,231);
   font-weight: 700;
-  font-size: 25px;
+  font-size: 20px;
   
 }
 
