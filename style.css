@@ -17,7 +17,7 @@ background-color:#07374a; ;
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    display: none;
+    
   }
 
   .menu-items {
